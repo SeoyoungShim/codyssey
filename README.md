@@ -1,34 +1,21 @@
-﻿# Docker 실습 프로젝트
+﻿# Codyssey Docker Practice
+
+Docker와 GitHub를 이용한 개발 워크스테이션 실습 프로젝트입니다.
 
 ## 1. 프로젝트 소개
-Docker의 기본 개념과 컨테이너 실행 및 데이터 저장 방식을 실습한 프로젝트입니다.
+
+Docker의 기본 개념을 이해하고 Nginx 기반 웹 서버를 구축하며 이미지, 컨테이너, 포트, Bind Mount, Volume, Network의 사용법을 실습합니다.
 
 ## 2. 실습 환경
+
 - OS: Windows
 - Terminal: PowerShell
-- Container Platform: Docker
-- Image: Nginx, Alpine Linux
+- Container Platform: Docker Desktop
+- Base Image: Nginx Alpine
+- Web Server Port: 80
+- Host Port: 8080
 
-## 3. 주요 실습 내용
-
-### 1) Docker 이미지
-Docker 이미지를 다운로드하고 관리하는 방법을 실습했습니다.
-
-### 2) Docker 컨테이너
-컨테이너를 생성하고 실행 및 관리하는 방법을 학습했습니다.
-
-### 3) 포트 포워딩
-호스트의 포트와 컨테이너의 포트를 연결하여 웹사이트에 접속했습니다.
-
-### 4) Bind Mount
-호스트 컴퓨터의 HTML 파일을 컨테이너 내부에 연결했습니다.
-호스트에서 파일을 수정하면 컨테이너의 웹페이지에도 변경 사항이 반영되는 것을 확인했습니다.
-
-### 5) Docker Volume
-Docker Volume을 생성하고 데이터를 저장했습니다.
-컨테이너를 삭제한 후에도 저장된 데이터가 유지되는 것을 확인했습니다.
-
-## 4. 프로젝트 구조
+## 3. 프로젝트 구조
 
 ```text
 codyssey/
@@ -36,16 +23,7 @@ codyssey/
 ├── README.md
 ├── site/
 │   └── index.html
-├── mount-test/
-│   └── index.html
-├── evidence/
-│   ├── docker-version.txt
-│   ├── docker-images.txt
-│   ├── docker-ps.txt
-│   ├── docker-browser.png
-│   ├── docker-images.txt
-│   ├── bind-mount-ps.txt
-│   ├── bind-mount-browser.png
-│   └── docker-volume.txt
-└── logs/
-    └── container.log
+├── logs/
+└── evidence/
+    ├── assessment/
+    └── assessment-backup.zip

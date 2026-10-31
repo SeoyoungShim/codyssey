@@ -1,0 +1,21 @@
+﻿HTTP/1.1 200 OK
+Server: nginx/1.31.8
+Date: Sat, 31 Oct 2026 10:29:01 GMT
+Content-Type: text/html
+Content-Length: 273
+Last-Modified: Thu, 29 Oct 2026 11:49:39 GMT
+Connection: keep-alive
+ETag: "6ae332d3-111"
+Accept-Ranges: bytes
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Codyssey Docker Practice</title>
+</head>
+<body>
+    <h1>Codyssey Docker Practice</h1>
+    <p>Docker? GitHub瑜??댁슜??媛쒕컻 ?뚰겕?ㅽ뀒?댁뀡 ?ㅼ뒿?낅땲??</p>
+</body>
+</html>
