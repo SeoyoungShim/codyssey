@@ -1,0 +1,12 @@
+﻿[File Management Practice]
+Date: 2026-11-02
+
+1. Directory creation: Success
+2. File creation: Success
+3. File content writing: Success
+4. File content reading: Success
+5. File renaming (original.txt -> renamed.txt): Success
+6. File deletion: Success
+7. Final directory check: Empty
+
+Result: All file management operations completed successfully.
