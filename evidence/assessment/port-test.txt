@@ -1,21 +1,36 @@
-﻿HTTP/1.1 200 OK
+﻿curl.exe :   % Total    % Received % Xferd  Average Speed  Time    Time    Time   Cur
+rent
+위치 줄:1 문자:1
++ curl.exe -i http://localhost:8081 2>&1 | Out-File .\evidence\assessme ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (  % Total    % ... Time   Current:Strin 
+   g) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+                                 Dload  Upload  Total   Spent   Left   Speed
+
+  0      0   0      0   0      0      0      0                              0
+100    251 100    251   0      0  43231      0                              0
+100    251 100    251   0      0  42277      0                              0
+100    251 100    251   0      0  41694      0                              0
+HTTP/1.1 200 OK
 Server: nginx/1.31.8
-Date: Sat, 31 Oct 2026 10:29:01 GMT
+Date: Fri, 30 Oct 2026 09:52:55 GMT
 Content-Type: text/html
-Content-Length: 273
-Last-Modified: Thu, 29 Oct 2026 11:49:39 GMT
+Content-Length: 251
+Last-Modified: Fri, 30 Oct 2026 09:20:20 GMT
 Connection: keep-alive
-ETag: "6ae332d3-111"
+ETag: "6ae46154-fb"
 Accept-Ranges: bytes
 
-<!DOCTYPE html>
+癤?!DOCTYPE html>
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title>Codyssey Docker Practice</title>
+    <title>Bind Mount Test</title>
 </head>
 <body>
-    <h1>Codyssey Docker Practice</h1>
-    <p>Docker? GitHub瑜??댁슜??媛쒕컻 ?뚰겕?ㅽ뀒?댁뀡 ?ㅼ뒿?낅땲??</p>
+    <h1>Bind Mount Works!</h1>
+    <p>?뚯씪???섏젙?덈뜑??Docker ?뱀궗?댄듃??蹂寃쎈릺?덉뒿?덈떎!</p>
 </body>
 </html>

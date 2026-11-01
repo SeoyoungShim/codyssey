@@ -1,0 +1,1 @@
+﻿[{"Type":"bind","Source":"C:\\Users\\User\\codyssey\\mount-test","Destination":"/usr/share/nginx/html","Mode":"","RW":true,"Propagation":"rprivate"}]

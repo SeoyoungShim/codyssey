@@ -1,0 +1,4 @@
+﻿CONTAINER ID   IMAGE          COMMAND                   CREATED      STATUS                  PORTS                                     NAMES
+756f1ccfe609   hello-world    "/hello"                  2 days ago   Exited (0) 2 days ago                                             crazy_ardinghelli
+e342951d7cc2   nginx:alpine   "/docker-entrypoint.??   2 days ago   Up 2 minutes            0.0.0.0:8081->80/tcp, [::]:8081->80/tcp   mount-test-web
+afd7036ba4fc   05567c066724   "/docker-entrypoint.??   2 days ago   Up 2 minutes            0.0.0.0:8080->80/tcp, [::]:8080->80/tcp   my-web

@@ -1,2 +1,4 @@
-﻿CONTAINER ID   IMAGE               COMMAND                   CREATED        STATUS         PORTS                                     NAMES
-aa7c63274589   my-nginx-site:1.0   "/docker-entrypoint.??   46 hours ago   Up 8 minutes   0.0.0.0:8080->80/tcp, [::]:8080->80/tcp   my-web
+﻿CONTAINER ID   IMAGE          COMMAND                   CREATED              STATUS                          PORTS                                     NAMES
+756f1ccfe609   hello-world    "/hello"                  About a minute ago   Exited (0) About a minute ago                                             crazy_ardinghelli
+e342951d7cc2   nginx:alpine   "/docker-entrypoint.??   40 minutes ago       Up 40 minutes                   0.0.0.0:8081->80/tcp, [::]:8081->80/tcp   mount-test-web
+afd7036ba4fc   05567c066724   "/docker-entrypoint.??   3 hours ago          Up 3 hours                      0.0.0.0:8080->80/tcp, [::]:8080->80/tcp   my-web
