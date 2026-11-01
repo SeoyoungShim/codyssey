@@ -346,3 +346,26 @@ docker rm my-web
 Bind Mount와 Docker Volume을 활용하여 데이터 연결 방식과 영속성의 차이를 확인했으며, Linux 파일 시스템과 권한 관리, Docker Network 확인 및 GitHub를 통한 실습 자료 관리도 수행했다.
 
 실습 과정과 검증 결과는 `evidence` 폴더에 기록하여 프로젝트의 수행 과정을 확인할 수 있도록 정리했다.
+
+## 9. 평가 항목별 추가 설명
+
+### 9.1 Docker 네트워크와 포트 포워딩
+Docker 컨테이너는 독립된 네트워크 환경에서 실행된다. `-p 8080:80`은 호스트의 8080번 포트와 컨테이너의 80번 포트를 연결한다. 네트워크 정보는 `docker network ls`, `docker network inspect bridge` 명령으로 확인할 수 있다.
+
+### 9.2 절대 경로와 상대 경로
+절대 경로는 파일 시스템의 기준 위치부터 전체 경로를 표시한다. 상대 경로는 현재 작업 디렉터리를 기준으로 표시한다. Bind Mount에서는 호스트 경로와 컨테이너 내부 경로를 각각 지정해야 한다. PowerShell의 `Resolve-Path .\mount-test`로 실제 경로를 확인할 수 있다.
+
+### 9.3 Linux 파일 권한
+Linux 권한은 소유자, 그룹, 기타 사용자 순서로 표시한다. 읽기(r)는 4, 쓰기(w)는 2, 실행(x)은 1이다. 따라서 640은 소유자에게 읽기와 쓰기, 그룹에 읽기 권한을 부여하고 기타 사용자에게는 권한을 부여하지 않는다. 실제 확인 결과는 `evidence/assessment/permissions.txt`에 기록했다.
+
+### 9.4 포트 충돌 진단
+포트 충돌이 발생하면 먼저 `docker ps`로 컨테이너의 포트 매핑을 확인한다. 이후 Windows에서 `netstat -ano | findstr :8080`으로 포트 사용 프로세스를 확인하고, `Get-Process -Id PID`로 프로세스를 식별한다. 필요하면 다른 포트를 사용한다.
+
+### 9.5 데이터 영속성과 백업
+Bind Mount는 호스트의 지정 경로와 컨테이너를 연결한다. Docker Volume은 Docker가 관리하는 저장 공간을 사용한다. 컨테이너 삭제 후에도 Volume의 데이터는 유지될 수 있으므로 중요한 데이터는 별도로 백업해야 한다. Volume은 `docker volume ls`, `docker volume inspect`로 확인한다.
+
+### 9.6 문제 해결 과정
+문제 해결은 문제 현상 파악, 원인 가설 설정, 명령어를 통한 확인, 조치, 재검증 순서로 수행한다. 이번 실습에서는 HTTP 응답 본문의 한글 표시 문제를 확인하기 위해 원본 HTML을 UTF-8로 읽고, 웹 서버의 응답 상태를 별도로 확인했다. 8080번과 8081번 포트에서 HTTP 200 응답을 확인했다.
+
+### 9.7 평가 증거자료
+실제 실습 결과는 `evidence/assessment/`에 저장했다. Docker 버전과 환경, 이미지 및 컨테이너, 네트워크, 포트 접속, Bind Mount, Volume 영속성, Linux 권한, 파일 관리 및 Git 이력 자료를 확인할 수 있다.

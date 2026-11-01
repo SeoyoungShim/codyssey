@@ -1,0 +1,27 @@
+﻿=== Port 8080 ===
+HTTP Status: 200
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Codyssey Docker Practice</title>
+</head>
+<body>
+    <h1>Codyssey Docker Practice</h1>
+    <p>Dockerì GitHubë¥¼ ì´ì©í ê°ë° ìí¬ì¤íì´ì ì¤ìµìëë¤.</p>
+</body>
+</html>
+=== Port 8081 ===
+HTTP Status: 200
+ï»¿<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Bind Mount Test</title>
+</head>
+<body>
+    <h1>Bind Mount Works!</h1>
+    <p>íì¼ì ìì íëë Docker ì¹ì¬ì´í¸ë ë³ê²½ëììµëë¤!</p>
+</body>
+</html>
+
