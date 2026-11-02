@@ -1,0 +1,68 @@
+﻿**********************
+Windows PowerShell 기록 시작
+시작 시간: 20261102090254
+사용자 이름: DESKTOP-9HA9I8V\User
+RunAs 사용자: DESKTOP-9HA9I8V\User
+구성 이름: 
+Machine: DESKTOP-9HA9I8V (Microsoft Windows NT 10.0.26300.0)
+호스트 응용 프로그램: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+프로세스 ID: 15744
+PSVersion: 5.1.26100.9711
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.9711
+BuildVersion: 10.0.26100.9711
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+기록이 시작되었습니다. 출력 파일은 .\evidence\assessment\final-file-operations.txt입니다.
+PS C:\Users\User\codyssey> $work = Join-Path $env:TEMP ("codyssey-final-" + (Get-Date -Format "yyyyMMddHHmmss"))
+PS C:\Users\User\codyssey> New-Item -ItemType Directory -Path $work
+
+
+    디렉터리: C:\Users\User\AppData\Local\Temp
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----      2026-11-02   오전 9:02                codyssey-final-20261102090254
+
+
+PS C:\Users\User\codyssey> $file1 = Join-Path $work "original.txt"
+PS C:\Users\User\codyssey> $file2 = Join-Path $work "moved.txt"
+PS C:\Users\User\codyssey> Write-Output "`n=== FILE CREATION ==="
+
+=== FILE CREATION ===
+PS C:\Users\User\codyssey> Set-Content -Path $file1 -Value "File operation verification"
+PS C:\Users\User\codyssey> Get-Item $file1 | Select-Object Name, Length
+
+Name         Length
+----         ------
+original.txt     29
+
+
+PS C:\Users\User\codyssey> Write-Output "`n=== FILE MOVE ==="
+
+=== FILE MOVE ===
+PS C:\Users\User\codyssey> Move-Item $file1 $file2
+PS C:\Users\User\codyssey> Get-ChildItem $work | Select-Object Name, Length
+
+Name      Length
+----      ------
+moved.txt     29
+
+
+PS C:\Users\User\codyssey> Write-Output "`n=== FILE DELETION ==="
+
+=== FILE DELETION ===
+PS C:\Users\User\codyssey> Remove-Item $file2
+PS C:\Users\User\codyssey> Write-Output "File exists after deletion:"
+File exists after deletion:
+PS C:\Users\User\codyssey> Test-Path $file2
+False
+PS C:\Users\User\codyssey> Stop-Transcript
+**********************
+Windows PowerShell 기록 끝
+종료 시간: 20261102090255
+**********************

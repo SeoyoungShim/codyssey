@@ -1,0 +1,28 @@
+﻿**********************
+Windows PowerShell 기록 시작
+시작 시간: 20261102090255
+사용자 이름: DESKTOP-9HA9I8V\User
+RunAs 사용자: DESKTOP-9HA9I8V\User
+구성 이름: 
+Machine: DESKTOP-9HA9I8V (Microsoft Windows NT 10.0.26300.0)
+호스트 응용 프로그램: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+프로세스 ID: 15744
+PSVersion: 5.1.26100.9711
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.9711
+BuildVersion: 10.0.26100.9711
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+기록이 시작되었습니다. 출력 파일은 .\evidence\assessment\final-chmod-verification.txt입니다.
+PS C:\Users\User\codyssey> Write-Output "=== CHMOD 640 VERIFICATION ==="
+=== CHMOD 640 VERIFICATION ===
+PS C:\Users\User\codyssey> docker run --rm alpine:latest sh -c 'touch /tmp/permission-test; chmod 640 /tmp/permission-test; ls -l /tmp/permission-test; stat -c %a /tmp/permission-test'
+
+PS C:\Users\User\codyssey> Stop-Transcript
+**********************
+Windows PowerShell 기록 끝
+종료 시간: 20261102090257
+**********************

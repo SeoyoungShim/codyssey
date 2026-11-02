@@ -369,3 +369,13 @@ Bind Mount는 호스트의 지정 경로와 컨테이너를 연결한다. Docker
 
 ### 9.7 평가 증거자료
 실제 실습 결과는 `evidence/assessment/`에 저장했다. Docker 버전과 환경, 이미지 및 컨테이너, 네트워크, 포트 접속, Bind Mount, Volume 영속성, Linux 권한, 파일 관리 및 Git 이력 자료를 확인할 수 있다.
+## 10. 추가 평가 증거자료
+
+다음 자료는 파일 관리와 Linux 파일 권한 실습을 직접 수행하고 기록한 결과다.
+
+| 증거 파일 | 주요 내용 |
+|---|---|
+| `evidence/assessment/final-file-operations.txt` | 임시 파일 생성, 이동, 삭제 및 삭제 여부 확인 |
+| `evidence/assessment/final-chmod-verification.txt` | Docker Alpine 컨테이너에서 chmod 640 실행 및 ls -l, stat 결과 확인 |
+
+파일 삭제 검증 결과 `False`는 삭제 대상 파일이 더 이상 존재하지 않음을 의미한다. 권한 검증 결과 `640`은 소유자에게 읽기·쓰기, 그룹에는 읽기, 기타 사용자에게는 권한이 없음을 의미한다.
