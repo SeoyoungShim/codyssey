@@ -1,4 +1,4 @@
-# Docker 실습 프로젝트
+﻿# Docker 실습 프로젝트
 
 ## 1. 프로젝트 개요
 
@@ -392,3 +392,59 @@ Bind Mount는 호스트의 지정 경로와 컨테이너를 연결한다. Docker
 | `02-chmod-640.png` | `chmod 640` 실행 및 `ls -l`, `stat` 권한 확인 |
 
 스크린샷은 `evidence/assessment/screenshots/` 폴더에서 확인할 수 있다.
+
+## 12. Docker 실습 화면 증거
+
+이번 프로젝트에서 수행한 Docker 실습 과정을 단계별로 캡처했다. 각 이미지는 실제 PowerShell 명령어 실행 결과와 브라우저 접속 화면을 보여준다.
+
+### 12.1 Docker 환경 확인
+
+Docker 버전, 실행 환경, 이미지 및 컨테이너 상태를 확인했다.
+
+![Docker 버전 확인](evidence/01-docker-version.png)
+
+![Docker 실행 환경 확인](evidence/02-docker-info.png)
+
+![Docker 이미지 목록](evidence/03-docker-images.png)
+
+![Docker 컨테이너 목록](evidence/04-docker-ps.png)
+
+### 12.2 Nginx 웹 서버 구축 및 포트 포워딩
+
+Nginx 컨테이너를 실행하고 브라우저 접속 및 포트 연결을 확인했다.
+
+![Nginx 컨테이너 실행](evidence/05-nginx-container-running.png)
+
+![Nginx 브라우저 접속](evidence/06-nginx-browser.png)
+
+![포트 포워딩 확인](evidence/07-port-forwarding.png)
+
+### 12.3 Bind Mount 실습
+
+호스트의 파일을 컨테이너와 연결하고, 호스트에서 변경한 내용이 컨테이너에 반영되는지 확인했다.
+
+![Bind Mount 초기 상태](evidence/08-bind-mount-initial.png)
+
+![Bind Mount 변경 결과](evidence/09-bind-mount-updated.png)
+
+### 12.4 Docker Volume 실습
+
+Docker Volume을 생성하고 컨테이너에서 데이터를 저장한 뒤, 다른 컨테이너에서도 해당 데이터에 접근할 수 있는지 확인했다.
+
+![Docker Volume 목록](evidence/10-docker-volume-list.png)
+
+![Docker Volume 데이터 확인](evidence/11-docker-volume-data.png)
+
+### 12.5 Docker Network 실습
+
+사용자 정의 네트워크를 생성하고 두 컨테이너를 연결하여 네트워크 통신을 확인했다.
+
+![Docker Network 목록](evidence/12-docker-network-list.png)
+
+![Docker Network 생성](evidence/13-docker-network-create.png)
+
+![네트워크 연결 컨테이너](evidence/14-docker-network-containers.png)
+
+![컨테이너 간 네트워크 통신](evidence/15-docker-network-communication.png)
+
+
