@@ -379,3 +379,16 @@ Bind Mount는 호스트의 지정 경로와 컨테이너를 연결한다. Docker
 | `evidence/assessment/final-chmod-verification.txt` | Docker Alpine 컨테이너에서 chmod 640 실행 및 ls -l, stat 결과 확인 |
 
 파일 삭제 검증 결과 `False`는 삭제 대상 파일이 더 이상 존재하지 않음을 의미한다. 권한 검증 결과 `640`은 소유자에게 읽기·쓰기, 그룹에는 읽기, 기타 사용자에게는 권한이 없음을 의미한다.
+
+## 11. 터미널 실습 스크린샷
+
+파일 관리 및 Linux 파일 권한 변경을 직접 수행한 터미널 화면을 캡처하여 저장했다.
+
+| 증거 파일 | 주요 내용 |
+|---|---|
+| `01-file-create.png` | Linux 파일 생성 및 내용 확인 |
+| `02-file-move.png` | `mv` 명령을 이용한 파일 이동 확인 |
+| `03-file-delete.png` | `rm` 명령을 이용한 파일 삭제 및 삭제 검증 |
+| `02-chmod-640.png` | `chmod 640` 실행 및 `ls -l`, `stat` 권한 확인 |
+
+스크린샷은 `evidence/assessment/screenshots/` 폴더에서 확인할 수 있다.
